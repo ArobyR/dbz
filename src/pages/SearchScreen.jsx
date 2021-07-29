@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import queryString from "query-string";
 import { Characters } from "../models/Characters";
@@ -9,7 +9,6 @@ const SearchScreen = ({ history }) => {
   const { q = "" } = queryString.parse(location.search);
   const [inputValue, setInputValue] = useState(q);
   const [character, setCharacter] = useState([]);
-
 
   const handleOnSubmit = (e) => {
     e.preventDefault();

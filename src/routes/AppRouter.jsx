@@ -9,13 +9,13 @@ import WomenScreen from "../pages/WomenScreen";
 const AppRouter = () => {
   return (
     <>
-        <Header />
+      <Header />
       <Switch>
         <Route exact path="/men" component={MenScreen} />
         <Route exact path="/women" component={WomenScreen} />
         <Route exact path="/search" component={SearchScreen} />
         <Route exact path="/character/:id" component={CharaterScreen} />
-        {/* <Redirect to="/men" /> */}
+        <Redirect to="/men" />
       </Switch>
     </>
   );

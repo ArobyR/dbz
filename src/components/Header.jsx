@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import { Link, NavLink, useHistory } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { authType } from "../types/authTypes";
 
 const Header = () => {
   const [isNavCollapsed, setisNavCollapsed] = useState(false);
 
-  const history = useHistory()
+  const { dispatch } = useContext(AuthContext);
+
+  const history = useHistory();
 
   const handleLogout = () => {
-    history.replace("/login")
-  }
+    dispatch({type: authType.logout})
+    history.replace("/login");
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,7 +54,9 @@ const Header = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
+            <button className="btn btn-danger" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         </div>
       </div>
