@@ -2,7 +2,6 @@ import { useEffect, useReducer } from "react";
 import LoginRouter from "./routes/LoginRouter";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { useState } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { AuthReducer } from "./reducers/AuthReducer";
 
