@@ -6,7 +6,7 @@ const Card = ({ id, name, type }) => {
 
   return (
     <div className="card m-3 col-12 col-md-4 p-2" style={{ width: 250 }}>
-      <img className="card-img-top" src={path} alt={id} />
+      <img loading="lazy" className="card-img-top" src={path} alt={id} />
 
       <div className="car-body">
         <h3 className="card-title">{name}</h3>
