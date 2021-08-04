@@ -3,15 +3,15 @@ import Card from "../components/Card";
 import { Characters } from "../models/Characters";
 
 const MenScreen = () => {
-  const man = Characters.filter((character) => character.type === "h");
+  const men = Characters.filter((character) => character.type === "h");
 
   return (
     <div className="container mt-3">
       <h2>Men Screen:</h2>
       <hr />
       <div className="row">
-        {man.map((men) => (
-          <Card key={men.id} {...men} />
+        {men.map((man) => (
+          <Card key={man.id} {...man} />
         ))}
       </div>
     </div>

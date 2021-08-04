@@ -26,7 +26,6 @@ const SearchScreen = ({ history }) => {
       const characters = Characters.filter((character) =>
         character.name.toLocaleLowerCase().includes(value)
       );
-      console.log(characters);
       setCharacter(characters);
     } else {
       setCharacter([]);
